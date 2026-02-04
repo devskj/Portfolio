@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional digital marketer in Bangladesh with 5+ years experience specializing in social media management, SEO, Meta ads, and data-driven strategies at St_Data.">
+    <meta name="keywords" content="digital marketing Bangladesh, social media expert Rangpur, SEO services, Meta Business Suite, digital strategy consulting">
+    <title>Shahajun Khan Joy - Digital Marketing Portfolio</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        body.dark-mode {
+            background-color: #333;
+            color: #f4f4f4;
+        }
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        body.dark-mode header {
+            background-color: #0056b3;
+            color: #ddd;
+        }
+        nav {
+            background-color: #333;
+            padding: 10px;
+            transition: background-color 0.3s;
+        }
+        body.dark-mode nav {
+            background-color: #222;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        #hero {
+            background-image: url('https://thumbs.dreamstime.com/b/digital-marketing-concept-social-media-can-use-web-banner-infographics-hero-images-outline-isometric-vector-digital-marketing-311691462.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+        #hero h1 {
+            font-size: 3em;
+        }
+        #hero p {
+            font-size: 1.5em;
+        }
+        section {
+            padding: 50px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto 20px;
+        }
+        .services-list, .experience-list {
+            list-style: none;
+            padding: 0;
+        }
+        .services-list li, .experience-list li {
+            background: white;
+            margin: 10px 0;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        body.dark-mode .services-list li, body.dark-mode .experience-list li {
+            background: #444;
+            box-shadow: 0 2px 5px rgba(255,255,255,0.1);
+        }
+        .services-list li:hover, .experience-list li:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        .case-study {
+            background: white;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        body.dark-mode .case-study {
+            background: #444;
+            box-shadow: 0 2px 5px rgba(255,255,255,0.1);
+        }
+        .case-study:hover {
+            transform: scale(1.02);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        .case-study .content {
+            display: none;
+        }
+        .case-study.active .content {
+            display: block;
+        }
+        .case-study h3 {
+            margin: 0;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        body.dark-mode .case-study h3 {
+            border-bottom: 1px solid #555;
+        }
+        .case-study img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 10px auto;
+        }
+        #contact form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        body.dark-mode #contact form {
+            background: #444;
+        }
+        #contact input, #contact textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        body.dark-mode #contact input, body.dark-mode #contact textarea {
+            background: #555;
+            color: #fff;
+            border: 1px solid #666;
+        }
+        #contact button {
+            background: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        #contact button:hover {
+            background: #0056b3;
+        }
+        #theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 1000;
+        }
+        body.dark-mode #theme-toggle {
+            background: #0056b3;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        body.dark-mode footer {
+            background-color: #222;
+        }
+        @media (max-width: 768px) {
+            #hero h1 {
+                font-size: 2em;
+            }
+            #hero p {
+                font-size: 1.2em;
+            }
+            nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button id="theme-toggle">🌙</button>
+    <header>
+        <img src="https://pbs.twimg.com/profile_images/1677765772188459008/Si-jIT6s.jpg" alt="Profile Logo of Shahajun Khan Joy" class="profile-img" loading="lazy">
+        <h1>Shahajun Khan Joy</h1>
+        <p>Professional Digital Marketer | Owner of St_Data | 5+ Years Experience</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#case-studies">Case Studies</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <section id="hero">
+        <h1>Bangladesh-based Digital Marketing Expert</h1>
+        <p>Turning ideas into growth through strategic online campaigns 📈</p>
+    </section>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hi, I'm <strong>Shahajun Khan Joy</strong> from Rangpur, Bangladesh!</p>
+        <p>I am a passionate digital marketer with <strong>over 5 years of hands-on experience</strong> in the industry. I've worked with various companies and now proudly own <strong>St_Data</strong>, where I help businesses thrive online. My expertise lies in creating effective digital strategies that deliver real results.</p>
+        <p>Whether it's boosting brand visibility, managing social media, or driving targeted traffic, I'm here to help your business grow!</p>
+    </section>
+    <section id="services">
+        <h2>Services I Offer 💼</h2>
+        <ul class="services-list">
+            <li><strong>Digital Marketing Strategy</strong> – Custom plans to skyrocket your online presence</li>
+            <li><strong>Social Media Management</strong> – Engaging content & growth on platforms like Facebook, Instagram, LinkedIn</li>
+            <li><strong>Meta Business Suite Management</strong> – Optimized ads and analytics for maximum ROI</li>
+            <li><strong>Email Campaigns & SEO</strong> – Drive traffic and conversions</li>
+            <li><strong>Data Management & Insights</strong> – Turning data into actionable strategies</li>
+        </ul>
+    </section>
+    <section id="case-studies">
+        <h2>Sample Project Case Studies 📊</h2>
+        <p><em>These are representative examples based on typical projects I've handled. Results are illustrative of the kind of impact I deliver for clients.</em></p>
+        <div class="case-study" role="button" tabindex="0" aria-expanded="false">
+            <h3>1. Social Media Growth for a Local Retail Brand</h3>
+            <div class="content">
+                <p><strong>Challenge</strong>: A small fashion retailer in Bangladesh had stagnant social media pages with low engagement and fewer than 2,000 followers across platforms.</p>
+                <p><strong>Solution</strong>: Implemented a full social media management strategy including daily content posting, audience targeting, hashtag research, and community interaction on Facebook and Instagram.</p>
+                <p><strong>Results</strong>:</p>
+                <ul>
+                    <li>Grew followers from 2K to <strong>12K+ in 6 months</strong></li>
+                    <li>Increased average post engagement rate by <strong>350%</strong></li>
+                    <li>Drove <strong>40% more foot traffic</strong> to physical stores through targeted posts</li>
+                </ul>
+                <img src="https://images.klipfolio.com/website/public/d5b436b4-f012-4462-b226-521d46971055/Followers%20Growth.png" alt="Social Media Growth Chart" loading="lazy">
+            </div>
+        </div>
+        <div class="case-study" role="button" tabindex="0" aria-expanded="false">
+            <h3>2. Facebook Ads Campaign for E-Commerce Client</h3>
+            <div class="content">
+                <p><strong>Challenge</strong>: An online electronics store needed to boost sales during the holiday season but had high ad costs and low conversion rates.</p>
+                <p><strong>Solution</strong>: Managed Meta Business Suite to create targeted ad campaigns with audience segmentation, A/B testing creatives, retargeting, and pixel optimization.</p>
+                <p><strong>Results</strong>:</p>
+                <ul>
+                    <li>Generated <strong>5,233 clicks</strong> and <strong>459 conversions</strong></li>
+                    <li>Achieved <strong>ROI of 4.2x</strong> on ad spend</li>
+                    <li>Reduced cost per conversion by <strong>45%</strong></li>
+                </ul>
+                <img src="https://images.klipfolio.com/website/public/80d03872-3e74-47b7-8028-a66bd4c2e84a/fbad-performance-dash.jpg" alt="Facebook Ads Dashboard" loading="lazy">
+            </div>
+        </div>
+        <div class="case-study" role="button" tabindex="0" aria-expanded="false">
+            <h3>3. SEO & Traffic Boost for Service Business</h3>
+            <div class="content">
+                <p><strong>Challenge</strong>: A local service provider's website ranked poorly on Google, receiving minimal organic traffic.</p>
+                <p><strong>Solution</strong>: Conducted keyword research, on-page optimization, content creation, and technical SEO improvements.</p>
+                <p><strong>Results</strong>:</p>
+                <ul>
+                    <li>Increased monthly organic traffic by <strong>180%</strong> in 4 months</li>
+                    <li>Top 3 Google rankings for <strong>15+ primary keywords</strong></li>
+                    <li>Boosted lead inquiries by <strong>120%</strong> from search traffic</li>
+                </ul>
+                <img src="https://neilpatel.com/wp-content/uploads/2023/11/Average-SEO-Traffic-Growth-Over-time-Neil-Patel-By-NP-Digital.png" alt="SEO Traffic Growth Graph" loading="lazy">
+            </div>
+        </div>
+    </section>
+    <section id="experience">
+        <h2>Experience</h2>
+        <ul class="experience-list">
+            <li>
+                <strong>Owner & Digital Marketer</strong><br>
+                <strong>St_Data</strong> (Current)<br>
+                Leading digital marketing initiatives and client projects
+            </li>
+            <li>
+                <strong>Freelance Digital Marketer</strong><br>
+                5+ years working with international clients on platforms like Upwork & Freelancer<br>
+                Specialized in social media, marketing data, and online growth strategies
+            </li>
+        </ul>
+    </section>
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Ready to boost your business? Let's connect!</p>
+        <form id="contact-form">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <ul>
+            <li>LinkedIn: <a href="https://www.linkedin.com/in/shahajun-khan-joy">shahajun-khan-joy</a></li>
+            <li>Twitter/X: <a href="https://twitter.com/stdata973">@stdata973</a></li>
+            <li>YouTube: <a href="https://www.youtube.com/@shahajunkhanjoy">Shahajun Khan Joy</a></li>
+        </ul>
+    </section>
+    <footer>
+        <p>&copy; <span id="copyright-year"></span> Shahajun Khan Joy. All rights reserved.</p>
+    </footer>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Shahajun Khan Joy",
+      "jobTitle": "Digital Marketer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "St_Data"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Rangpur",
+        "addressCountry": "Bangladesh"
+      },
+      "url": "https://www.linkedin.com/in/shahajun-khan-joy",
+      "sameAs": [
+        "https://twitter.com/stdata973",
+        "https://www.youtube.com/@shahajunkhanjoy"
+      ]
+    }
+    </script>
+    <script>
+        // Dynamic copyright year
+        document.getElementById('copyright-year').textContent = new Date().getFullYear();
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Accordion functionality for case studies with accessibility
+        document.querySelectorAll('.case-study').forEach(item => {
+            item.addEventListener('click', function () {
+                const isActive = this.classList.toggle('active');
+                this.setAttribute('aria-expanded', isActive);
+            });
+            item.addEventListener('keydown', function (e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    this.click();
+                }
+            });
+        });
+
+        // Fade-in sections on scroll
+        const sections = document.querySelectorAll('section');
+        const observerOptions = {
+            threshold: 0.1
+        };
+        const sectionObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+        sections.forEach(section => {
+            sectionObserver.observe(section);
+        });
+
+        // Contact form submission (client-side placeholder; integrate backend for production)
+        const contactForm = document.getElementById('contact-form');
+        contactForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+            if (name && email && message) {
+                alert('Thank you for your message! I will get back to you soon.');
+                contactForm.reset();
+            } else {
+                alert('Please fill in all fields.');
+            }
+        });
+
+        // Dark mode toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        themeToggle.addEventListener('click', function () {
+            document.body.classList.toggle('dark-mode');
+            this.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
+        });
+    </script>
+</body>
+</html>
